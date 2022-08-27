@@ -1,0 +1,23 @@
+{
+  "dialog.floatBorderHighlight": "CocFloatingBorder",
+  "diagnostic.messageLevel": "warning",
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "emmet.includeLanguages": {
+    "vue": "css",
+    "javascript": "html",
+    "sass": "css",
+    "scss": "css"
+  },
+  "prettier.tabWidth": 2,
+  "prettier.semi": false,
+  "prettier.singleQuote": false,
+  "prettier.trailingComma": "all",
+  "prettier.bracketSpacing": true,
+  "prettier.arrowParens": "avoid",
+  "prettier.printWidth": 60,
+  "prettier.statusItemText": "Iwku",
+  "rust-analyzer.server.extraEnv": {
+    "RUSTUP_TOOLCHAIN": "stable"
+  },
+  "rust-analyzer.server.path": "/home/iwku/.cargo/bin/rust-analyzer"
+}
