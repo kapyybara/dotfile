@@ -1,6 +1,6 @@
 {
+  "diagnostic.checkCurrentLine": true,
   "dialog.floatBorderHighlight": "CocFloatingBorder",
-  "diagnostic.messageLevel": "warning",
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "emmet.includeLanguages": {
     "vue": "css",
@@ -19,5 +19,6 @@
   "rust-analyzer.server.extraEnv": {
     "RUSTUP_TOOLCHAIN": "stable"
   },
-  "rust-analyzer.server.path": "/home/iwku/.cargo/bin/rust-analyzer"
+  "git.addGBlameToVirtualText": true,
+  "git.virtualTextPrefix": "    --- "
 }
