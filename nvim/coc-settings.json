@@ -5,11 +5,12 @@
   "emmet.includeLanguages": {
     "vue": "css",
     "javascript": "html",
+    "typescript": "html",
     "sass": "css",
     "scss": "css"
   },
   "prettier.tabWidth": 2,
-  "prettier.semi": false,
+  "prettier.semi": true,
   "prettier.singleQuote": false,
   "prettier.trailingComma": "all",
   "prettier.bracketSpacing": true,
@@ -19,6 +20,7 @@
   "rust-analyzer.server.extraEnv": {
     "RUSTUP_TOOLCHAIN": "stable"
   },
+  "git.conflict.enabled": true,
   "git.addGBlameToVirtualText": true,
-  "git.virtualTextPrefix": "    --- "
+  "git.virtualTextPrefix": "    🐧 > "
 }
