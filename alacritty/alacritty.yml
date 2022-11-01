@@ -1,0 +1,21 @@
+import:
+  # Set font
+  - ~/.config/alacritty/fonts/jetbrains.yml
+  - ~/.config/alacritty/themes/tokyo-night.yml
+
+window:
+  padding:
+    x: 0 
+    y: 0 
+
+  dynamic_padding: false 
+  decorations: none 
+  opacity: 0.8 
+
+font:
+    size: 12
+
+    draw_bold_text_with_bright_colors: true 
+
+key_bindings:
+  - { key: Return,   mods: Control|Shift, action: SpawnNewInstance }
