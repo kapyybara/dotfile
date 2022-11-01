@@ -1,7 +1,11 @@
 local status, nvim_lsp = pcall(require, 'lspconfig')
 if (not status) then return end
+local status2, util = pcall(require, 'lspconfig/util')
+if (not status2) then return end
 
 local protocol = require('vim.lsp.protocol')
+local capabilities = protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local on_attach = function(client, bufnr)
   -- formatting
@@ -47,6 +51,55 @@ nvim_lsp.sumneko_lua.setup {
 }
 
 nvim_lsp.rust_analyzer.setup {
+  on_attach = on_attach,
+  settings = {
+    ["rust-analyzer"] = {
+      imports = {
+        granularity = {
+          group = "module",
+        },
+        prefix = "self",
+      },
+      cargo = {
+        buildScripts = {
+          enable = true,
+        },
+      },
+      procMacro = {
+        enable = true
+      },
+    }
+  },
   cmd = { "rust-analyzer" },
   filetypes = { "rust" },
 }
+
+
+nvim_lsp.gopls.setup {
+  on_attach = on_attach,
+  cmd = { "gopls", "serve" },
+  filetypes = { "go", "gomod" },
+  root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+    },
+  },
+}
+
+nvim_lsp.emmet_ls.setup({
+  -- on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'vue' },
+  init_options = {
+    html = {
+      options = {
+        -- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+        ["bem.enabled"] = true,
+      },
+    },
+  }
+})

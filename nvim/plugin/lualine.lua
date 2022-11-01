@@ -1,19 +1,7 @@
 local status, lualine = pcall(require, 'lualine')
+local colors = require("tokyonight.colors").setup() -- pass in any of the config options as explained above
 if (not status) then return end
 
-local colors = {
-  bg       = '#002b36',
-  fg       = '#bbc2cf',
-  yellow   = '#ECBE7B',
-  cyan     = '#008080',
-  darkblue = '#081633',
-  green    = '#98be65',
-  orange   = '#FF8800',
-  violet   = '#a9a1e1',
-  magenta  = '#c678dd',
-  blue     = '#51afef',
-  red      = '#ec5f67',
-}
 
 local conditions = {
   buffer_not_empty = function()
@@ -35,14 +23,7 @@ local config = {
     -- Disable sections and component separators
     component_separators = '',
     section_separators = '',
-    theme =
-    {
-      -- We are going to use lualine_c an lualine_x as left and
-      -- right section. Both are highlighted by c theme .  So we
-      -- are just setting default looks o statusline
-      normal = { c = { fg = colors.fg, bg = colors.bg } },
-      inactive = { c = { fg = colors.fg, bg = colors.bg } },
-    },
+    theme = 'tokyonight',
   },
   sections = {
     -- these are to remove the defaults
@@ -174,7 +155,7 @@ ins_left {
 ins_left {
   -- Lsp server name .
   function()
-    local msg = 'No Active Lsp'
+    local msg = 'Lsp '
     local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
     local clients = vim.lsp.get_active_clients()
     if next(clients) == nil then
@@ -207,7 +188,7 @@ ins_right {
     dos = '', -- e70f
     mac = '', -- e711
   },
-  color = { fg = colors.green, gui = 'bold' },
+  color = { fg = colors.red },
 }
 
 ins_right {
@@ -215,12 +196,6 @@ ins_right {
   icon_only = true,
   icons_enabled = true, -- I think icons are cool but Eviline doesn't have them. sigh
   -- color = { fg = colors.red, gui = 'italic' },
-}
-
-ins_right {
-  'branch',
-  icon = 'ﯙ',
-  color = { fg = colors.violet, gui = 'bold' },
 }
 
 ins_right {
@@ -233,6 +208,13 @@ ins_right {
     removed = { fg = colors.red },
   },
   cond = conditions.hide_in_width,
+}
+
+
+ins_right {
+  'branch',
+  icon = 'ﯙ',
+  color = { fg = colors.purple, gui = 'bold' },
 }
 
 ins_right {

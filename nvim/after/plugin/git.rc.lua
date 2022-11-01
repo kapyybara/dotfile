@@ -5,6 +5,6 @@ if (not status) then return end
 git.setup {
   keymaps = {
     blame = "<Leader>gb", -- Open blame in window,
-    browse = "<reader>go"
+    browse = "<Leader>go" -- Open file/folder in git repository
   }
 }
