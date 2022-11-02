@@ -91,7 +91,7 @@ nvim_lsp.gopls.setup {
 }
 
 nvim_lsp.emmet_ls.setup({
-  -- on_attach = on_attach,
+  on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'vue' },
   init_options = {
@@ -103,3 +103,36 @@ nvim_lsp.emmet_ls.setup({
     },
   }
 })
+
+nvim_lsp.cssls.setup({
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { 'css', 'sass', 'scss', 'less', 'vue' },
+  root_dir = util.root_pattern("package.json", ".git"),
+  cmd = { "vscode-css-language-server", "--stdio" },
+  settings = {
+    css = {
+      validate = true
+    },
+    less = {
+      validate = true
+    },
+    scss = {
+      validate = true
+    }
+  },
+  single_file_support = true,
+})
+
+
+nvim_lsp.cssmodules_ls.setup {
+  -- provide your on_attach to bind keymappings
+  on_attach = on_attach,
+  cmd = { "cssmodules-language-server" },
+  filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+  root_dir = util.root_pattern("package.json"),
+  -- optionally
+  init_options = {
+    camelCase = 'dashes',
+  },
+}
