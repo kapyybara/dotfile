@@ -3,24 +3,28 @@ if type -q exa
   alias lla "ll -a"
 end
 
+# Rust cargo
 set -gx PATH "$HOME/.cargo/bin" $PATH;
+# end
 
 # Nvm Node
-set --universal nvm_default_version v18.4.0
+set --universal nvm_default_version v16.17.0
+# end
 
 # pnpm
 set -gx PNPM_HOME "/home/iwku/.local/share/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 alias pn=pnpm
-# pnpm end
+# end
 
 # Golang
 set -gx GO_HOME "/usr/local/go/bin"
 set -gx PATH "$GO_HOME" $PATH
+# end
 
 # Default config for prettierd
 set -u PRETTIERD_DEFAULT_CONFIG "/home/iwku/.config/nvim/plugin.prettierrc.json"
-
+# end
 
 # The fuck 
 function fuck -d "Correct your previous console command"
@@ -32,11 +36,19 @@ function fuck -d "Correct your previous console command"
     builtin history merge ^ /dev/null
   end
 end
+# end
 
 # Alias
 alias nvim "~/nvim.appimage"
 alias vim "~/nvim.appimage"
 alias v "~/nvim.appimage"
 alias cat "batcat"
-
+alias python "python3"
 alias lpdc "cp /home/iwku/.config/nvim/default_var/.prettierrc ./"
+
+# git
+alias ga "git add"
+alias gc "git commit"
+alias gp "git push"
+alias gl "git pull origin main"
+# end
