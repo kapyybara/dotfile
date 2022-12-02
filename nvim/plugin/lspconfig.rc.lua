@@ -93,7 +93,7 @@ nvim_lsp.gopls.setup {
 nvim_lsp.emmet_ls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'vue' },
+  filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
   init_options = {
     html = {
       options = {
@@ -107,7 +107,7 @@ nvim_lsp.emmet_ls.setup({
 nvim_lsp.cssls.setup({
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { 'css', 'sass', 'scss', 'less', 'vue' },
+  filetypes = { 'css', 'sass', 'scss', 'less' },
   root_dir = util.root_pattern("package.json", ".git"),
   cmd = { "vscode-css-language-server", "--stdio" },
   settings = {

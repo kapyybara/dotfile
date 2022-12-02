@@ -6,7 +6,7 @@ theme.setup({
   -- or leave it empty to use the default settings
   style = "night", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
   light_style = "day", -- The theme is used when the background is set to light
-  transparent = false, -- Enable this to disable setting the background color
+  transparent = true, -- Enable this to disable setting the background color
   terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
   styles = {
     -- Style to be applied to different syntax groups
@@ -16,8 +16,8 @@ theme.setup({
     functions = {},
     variables = {},
     -- Background styles. Can be "dark", "transparent" or "normal"
-    sidebars = "dark", -- style for sidebars, see below
-    floats = "dark", -- style for floating windows
+    sidebars = "transparent", -- style for sidebars, see below
+    floats = "transparent", -- style for floating windows
   },
   sidebars = { "qf", "help" }, -- Set a darker background on sidebar-like windows. For example: `["qf", "vista_kind", "terminal", "packer"]`
   day_brightness = 0.3, -- Adjusts the brightness of the colors of the **Day** style. Number between 0 and 1, from dull to vibrant colors
@@ -40,9 +40,9 @@ theme.setup({
       fg = colors.yellow,
       bg = colors.black,
     }
-    --    hl.Visual = {
-    --      style = "reverse"
-    --    }
+    -- hl.Visual = {
+    --   style = "reverse"
+    -- }
   end,
 })
 
