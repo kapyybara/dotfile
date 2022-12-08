@@ -52,3 +52,6 @@ alias gc "git commit"
 alias gp "git push"
 alias gl "git pull origin main"
 # end
+
+starship init fish | source
+
