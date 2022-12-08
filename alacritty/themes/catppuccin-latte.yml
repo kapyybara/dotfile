@@ -1,7 +1,8 @@
 colors:
     # Default colors
     primary:
-        background: "#EFF1F5" # base
+        background: '#0B181D'
+          #   background: "#EFF1F5" # base
         foreground: "#4C4F69" # text
         # Bright and dim foreground colors
         dim_foreground: "#4C4F69" # text

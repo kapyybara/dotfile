@@ -1,12 +1,13 @@
 import:
   # Set font
   - ~/.config/alacritty/fonts/jetbrains.yml
-  - ~/.config/alacritty/themes/tokyo-night.yml
+    # - ~/.config/alacritty/themes/nord.yml
+  - ~/.config/alacritty/themes/catppuccin-mocha.yml
 
 window:
   padding:
-    x: 0 
-    y: 0 
+    x: 8 
+    y: 8
 
   dynamic_padding: false 
   decorations: none 
