@@ -2,8 +2,6 @@ add_newline = false
 
 right_format = """$git_branch$git_status$battery$memory_usage"""
 
-continuation_prompt = "▶▶"
-
 [character]
 success_symbol = "[➜](bold green)"
 error_symbol = "[✗](bold red)"
@@ -69,5 +67,5 @@ disabled = false
 show_always = true
 
 [nodejs]
-format = "[ $version](bold green)"
+format = "[ $version ](bold green)"
 
