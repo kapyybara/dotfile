@@ -6,12 +6,12 @@ import:
 
 window:
   padding:
-    x: 8 
-    y: 8
+    x: 4 
+    y: 4
 
   dynamic_padding: false 
   decorations: none 
-  opacity: 0.8 
+  opacity: 0.9 
 
 font:
     size: 12
