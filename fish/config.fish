@@ -39,9 +39,6 @@ end
 # end
 
 # Alias
-alias nvim "~/nvim.appimage"
-alias vim "~/nvim.appimage"
-alias v "~/nvim.appimage"
 alias cat "batcat"
 alias python "python3"
 alias lpdc "cp /home/iwku/.config/nvim/default_var/.prettierrc ./"
