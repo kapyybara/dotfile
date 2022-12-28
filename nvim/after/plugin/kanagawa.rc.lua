@@ -4,7 +4,7 @@ if (not status) then return end
 theme.setup({
     undercurl = true, -- enable undercurls
     commentStyle = { italic = true },
-    functionStyle = { italic = true },
+    functionStyle = {},
     keywordStyle = { italic = true },
     statementStyle = { bold = true },
     typeStyle = {},
