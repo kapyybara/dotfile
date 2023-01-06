@@ -8,7 +8,8 @@ set -gx PATH "$HOME/.cargo/bin" $PATH;
 # end
 
 # Nvm Node
-set --universal nvm_default_version v16.17.0
+# set --universal nvm_default_version v16.17.0
+nvm use
 # end
 
 # pnpm
@@ -39,6 +40,8 @@ end
 # end
 
 # Alias
+alias vy "nvim"
+alias pn "pnpm"
 alias cat "batcat"
 alias python "python3"
 alias lpdc "cp /home/iwku/.config/nvim/default_var/.prettierrc ./"
