@@ -1,0 +1,16 @@
+font: 
+    normal:
+      family: Hurmit Nerd Font Mono 
+      style: Regular
+  
+    bold:
+      family: Hurmit Nerd Font Mono 
+      style: Bold
+  
+    italic:
+      family: Hurmit Nerd Font Mono 
+      style: Italic
+  
+    bold_italic:
+      family: Hurmit Nerd Font Mono 
+      style: Bold Italic
