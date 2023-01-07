@@ -1,0 +1,6 @@
+--local Color, colors, Group, groups, styles = require('colorbuddy').setup()
+--
+--Color.new('black', '#000000')
+--Group.new('CursorLine', colors.none, colors.base03, styles.NONE, colors.base1)
+--Group.new('CursorLineNr', colors.yellow, colors.black, styles.NONE, colors.base1)
+--Group.new('Visual', colors.none, colors.base03, styles.reverse)
