@@ -42,7 +42,6 @@ end
 # Alias
 alias vy "nvim"
 alias pn "pnpm"
-alias cat "batcat"
 alias python "python3"
 alias lpdc "cp /home/iwku/.config/nvim/default_var/.prettierrc ./"
 
@@ -52,6 +51,11 @@ alias gc "git commit"
 alias gp "git push"
 alias gl "git pull origin main"
 # end
+
+# 1.1.1.1
+alias 1.1 "warp-cli connect"
+alias 1.0 "warp-cli disconnect"
+
 
 starship init fish | source
 

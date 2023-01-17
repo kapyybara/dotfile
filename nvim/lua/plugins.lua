@@ -67,12 +67,17 @@ packer.startup(function(use)
 
     -- Tienes's addition
     use "kylechui/nvim-surround"
-    -- Tree files
-    use 'nvim-tree/nvim-tree.lua'
 
     -- Theme
     use 'folke/tokyonight.nvim'
     use "rebelot/kanagawa.nvim"
 
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
 
 end)
