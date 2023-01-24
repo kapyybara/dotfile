@@ -2,7 +2,7 @@ local status, saga = pcall(require, 'lspsaga')
 
 if (not status) then return end
 
-saga.init_lsp_saga {
+saga.setup {
   border_style = "rounded",
   code_action_icon = "",
   code_action_lightbulb = {
