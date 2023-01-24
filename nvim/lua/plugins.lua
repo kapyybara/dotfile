@@ -71,6 +71,7 @@ packer.startup(function(use)
     -- Theme
     use 'folke/tokyonight.nvim'
     use "rebelot/kanagawa.nvim"
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     use {
         'nvim-tree/nvim-tree.lua',

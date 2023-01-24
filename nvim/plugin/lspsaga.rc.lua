@@ -3,20 +3,17 @@ local status, saga = pcall(require, 'lspsaga')
 if (not status) then return end
 
 saga.setup {
-  border_style = "rounded",
-  code_action_icon = "",
-  code_action_lightbulb = {
-    enable = true,
-    enable_in_insert = false,
-    cache_code_action = true,
-    sign = true,
-    update_time = 150,
-    sign_priority = 20,
-    virtual_text = true,
-  },
-  server_filetype_map = {
-  }
-
+    border_style = "rounded",
+    code_action_icon = "",
+    code_action_lightbulb = {
+        enable = true,
+        enable_in_insert = false,
+        cache_code_action = true,
+        sign = true,
+        update_time = 150,
+        sign_priority = 20,
+        virtual_text = true,
+    },
 }
 
 local opts = { noremap = true, silent = true }
