@@ -10,7 +10,6 @@ new_window pixel 1
 
 #thin borders
 #hide_edge_borders both
-
 # Set inner/outer gaps
 gaps inner 4
 gaps outer 4
@@ -402,12 +401,10 @@ bar {
 #####################################
 
 bindsym $mod+space exec rofi -modi drun -show drun \
-		-config ~/.config/rofi/rofidmenu.rasi
+#bindsym $mod+space exec $HOME/.config/rofi/bin/launcher
 
-#bindsym F9 exec rofi -modi drun -show drun \
-#		-config ~/.config/rofi/rofidmenu.rasi
-
-## rofi bindings for window menu ($mod+t /F10 optional disabled)
+bindsym $mod+d exec $HOME/.config/rofi/bin/runner
+bindsym $mod+Shift+s exec $HOME/.config/rofi/bin/screenshot
 
 bindsym $mod+t exec rofi -show window \
 		-config ~/.config/rofi/rofidmenu.rasi
