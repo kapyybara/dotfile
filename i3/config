@@ -23,11 +23,9 @@ gaps outer 4
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# switch/iterate between workspaces
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
-# switch to workspace
 bindsym $mod+1    workspace  $ws1
 bindsym $mod+2    workspace  $ws2
 bindsym $mod+3    workspace  $ws3
@@ -38,8 +36,6 @@ bindsym $mod+7    workspace  $ws7
 bindsym $mod+8    workspace  $ws8
 bindsym $mod+9    workspace  $ws9
 bindsym $mod+0    workspace  $ws10
-
-# move focused container to workspace
 bindsym $mod+Shift+1    move container to workspace  $ws1
 bindsym $mod+Shift+2    move container to workspace  $ws2
 bindsym $mod+Shift+3    move container to workspace  $ws3
@@ -51,7 +47,7 @@ bindsym $mod+Shift+8    move container to workspace  $ws8
 bindsym $mod+Shift+9    move container to workspace  $ws9
 bindsym $mod+Shift+0    move container to workspace  $ws10
 
-
+# RESIZE
 mode "resize" {
         bindsym h resize shrink width 10 px or 10 ppt
         bindsym j resize grow height 10 px or 10 ppt
@@ -69,100 +65,78 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-######################################
-# keybindings for different actions: #
-######################################
-
+# LOCK
 bindsym $mod+Shift+Return exec ~/.config/i3/scripts/blur-lock
-# start a terminal
+
+# TERMINAL
 bindsym $mod+Return exec alacritty 
 
-# kill focused window
+# KILL WINDOW
 bindsym $mod+q kill
 
-# exit-menu
+# POWER MENU
 bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu
 
-# Lock the system
-# lock with a picture:
-# bindsym $mod+Shift exec i3lock -i  '/home/iwku/Pictures/wallpapers/os/endeavour-black-4k.png' -p default|win -t
-# lock by blurring the screen:
-
-# reload the configuration file
+# RELOAD
 bindsym $mod+Shift+c reload
 
-# restart i3 inplace (preserves your layout/session, can be used to update i3)
+# RESTART
 bindsym $mod+Shift+r restart
-
-# keybinding in fancy rofi (automated):
-bindsym F1 exec ~/.config/i3/scripts/keyhint-2
-# alternative
-# keybinding list in editor:
-# bindsym $mod+F1 exec xed ~/.config/i3/keybindings
 
 # Backlight control
 bindsym XF86MonBrightnessUp exec xbacklight +5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
 bindsym XF86MonBrightnessDown exec xbacklight -5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
 
-# change focus
+# CHANGE FOCUS
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
+# MOVE FOCUSED WINDOW
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
+# CHANGE ORIENTATION
 bindsym $mod+b split h
-
-# split in vertical orientation
 bindsym $mod+v split v
 
-# enter fullscreen mode for the focused container
+# FULLSCREEN 
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
+# CHANGE LAYOUT (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+g layout tabbed
 bindsym $mod+e layout toggle split
 
-# toggle tiling / floating
+# TOGGLE TILING 
 bindsym $mod+Shift+space floating toggle
 
-# change focus between tiling / floating windows
-
-# focus the parent container
+# FOCUS THE PARENT CONTAINER
 bindsym $mod+a focus parent
 
 # open new empty workspace
 bindsym $mod+Shift+n exec ~/.config/i3/scripts/empty_workspace
 
-# Multimedia Keys
-# volume
+# MULTIMEDIA KEYS
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
 
-# gradular volume control
+# GRADULAR VOLUME CONTROL
 bindsym $mod+XF86AudioRaiseVolume exec amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
 bindsym $mod+XF86AudioLowerVolume exec amixer -D pulse sset Master 1%- && pkill -RTMIN+1 i3blocks
 
-# mute
+# MUTE
 bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
 
 # audio control
@@ -171,10 +145,10 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# Redirect sound to headphones
+# REDIRECT SOUND TO HEADPHONES
 bindsym $mod+p exec /usr/local/bin/switch-audio-port
 
-## App shortcuts
+## APP SHORTCUTS
 bindsym $mod+w exec /usr/bin/firefox
 bindsym $mod+n exec /usr/bin/thunar
 bindsym Print exec scrot ~/%Y-%m-%d-%T-screenshot.png && notify-send "Screenshot saved to ~/$(date +"%Y-%m-%d-%T")-screenshot.png"
@@ -220,6 +194,8 @@ set $ws10 "10"
 # install picom package (yay -S picom)
 # start using default config 
 exec_always --no-startup-id picom -b
+# start ibus
+exec_always --no-startup-id ibus-daemon -drx
 #
 # for custom config:
 #exec_always --no-startup-id picom --config  ~/.config/picom/picom.conf
@@ -258,7 +234,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill '/home/iwku/Pictures/wallpapers/os/endeavour-black-4k.png'
+exec --no-startup-id sleep 1 && feh --bg-fill '/home/iwku/Pictures/wallpapers/misc/windows-error.jpg'
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
@@ -377,7 +353,7 @@ bar {
 		font pango:  JetBrainsMono Nerd Font 6
 		status_command i3blocks -c ~/.config/i3/i3blocks.conf
 	    	position top 
-#	    	i3bar_command i3bar --transparency
+            #i3bar_command i3bar --transparency
 		    #tray_output primary
 		    tray_padding 2
 
@@ -396,20 +372,21 @@ bar {
 	    #	    urgent_workspace	$urgentred	    	$urgentred	$white		$purple
 	        }
 }
-#####################################
-# Application menu handled by rofi: #
-#####################################
 
+# ROFI
+
+# LAUNCHER
 bindsym $mod+space exec rofi -modi drun -show drun \
-#bindsym $mod+space exec $HOME/.config/rofi/bin/launcher
+# bindsym $mod+space exec $HOME/.config/rofi/bin/launcher
 
 bindsym $mod+d exec $HOME/.config/rofi/bin/runner
 bindsym $mod+Shift+s exec $HOME/.config/rofi/bin/screenshot
 
-bindsym $mod+t exec rofi -show window \
-		-config ~/.config/rofi/rofidmenu.rasi
+# WINDOW OPENING
+# bindsym $mod+t exec rofi -show window \
+#		-config ~/.config/rofi/rofidmenu.rasi
 
-#bindsym F10 exec rofi -show window \
+# bindsym F10 exec rofi -show window \
 #		-config ~/.config/rofi/rofidmenu.rasi
 
 ## rofi bindings to manage clipboard (install rofi-greenclip from the AUR)
