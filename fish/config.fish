@@ -56,6 +56,9 @@ alias gl "git pull origin main"
 alias 1.1 "warp-cli connect"
 alias 1.0 "warp-cli disconnect"
 
+alias rm="rm -i"
+alias top bpytop
+
 
 starship init fish | source
 
