@@ -3,16 +3,16 @@ local status, cat = pcall(require, 'catppuccin')
 if (not status) then return end
 
 cat.setup({
-    flavour = "mocha", -- latte, frappe, macchiato, mocha
-    --background = { -- :h background
-    --    light = "latte",
-    --    dark = "mocha",
-    --},
-    transparent_background = true,
+    flavour = "macchiato", -- latte, frappe, macchiato, mocha
+    background = { -- :h background
+        light = "latte",
+        dark = "mocha",
+    },
+    transparent_background = false,
     show_end_of_buffer = false, -- show the '~' characters after the end of buffers
     term_colors = true,
     dim_inactive = {
-        enabled = true,
+        enabled = false,
         shade = "dark",
         percentage = 0.15,
     },

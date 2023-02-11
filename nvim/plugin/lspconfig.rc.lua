@@ -137,3 +137,8 @@ nvim_lsp.cssmodules_ls.setup {
         camelCase = 'dashes',
     },
 }
+
+
+nvim_lsp.tailwindcss.setup {}
+
+nvim_lsp.anakin_language_server.setup {}
