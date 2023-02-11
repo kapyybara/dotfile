@@ -1,26 +1,15 @@
-include catppuccin-mocha
-
 font pango: JetBrainsMono Nerd Font 8
 
 set $mod Mod4
-
 workspace_layout default
-
 new_window pixel 1
 
 #thin borders
 #hide_edge_borders both
 # Set inner/outer gaps
-gaps inner 4
+gaps inner 6
 gaps outer 4
 
-# show window title bars (not officially supported with i3gaps)
-#default_border normal
-
-# window title alignment
-#title_align center
-
-# Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 bindsym $mod+Tab workspace next
@@ -36,6 +25,7 @@ bindsym $mod+7    workspace  $ws7
 bindsym $mod+8    workspace  $ws8
 bindsym $mod+9    workspace  $ws9
 bindsym $mod+0    workspace  $ws10
+
 bindsym $mod+Shift+1    move container to workspace  $ws1
 bindsym $mod+Shift+2    move container to workspace  $ws2
 bindsym $mod+Shift+3    move container to workspace  $ws3
@@ -160,8 +150,6 @@ bindsym $mod+Shift+p exec ~/.config/i3/scripts/power-profiles
 # configuration for workspace behaviour: #
 ##########################################
 
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -173,32 +161,11 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# transparency
-# uncomment one of them to be used
-# options could need changes, related to used GPU and drivers.
-# to find the right setting consult the archwiki or ask at the forum.
-#
-# xcompmgr: https://wiki.archlinux.org/title/Xcompmgr
-# manpage: https://man.archlinux.org/man/xcompmgr.1.en
-# install xcompmgr package to use it (yay -S xcompmgr)
-#exec --no-startup-id xcompmgr -C -n &
-# or an more specialized config like this:
-#exec --no-startup-id xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
-#
-# or:
-#
-# picom: https://wiki.archlinux.org/title/Picom
-# manpage: https://man.archlinux.org/man/picom.1.en
-# The default configuration is available in /etc/xdg/picom.conf 
-# For modifications, it can be copied to ~/.config/picom/picom.conf or ~/.config/picom.conf
-# install picom package (yay -S picom)
 # start using default config 
 exec_always --no-startup-id picom -b
+
 # start ibus
 exec_always --no-startup-id ibus-daemon -drx
-#
-# for custom config:
-#exec_always --no-startup-id picom --config  ~/.config/picom/picom.conf
 
 #############################################
 # autostart applications/services on login: #
@@ -220,7 +187,7 @@ exec --no-startup-id dex --autostart --environment i3
 #exec --no-startup-id sh /usr/share/endeavouros/scripts/welcome --startdelay=3 
 
 # num lock activated
-#exec --no-startup-id numlockx on
+exec --no-startup-id numlockx on
 
 # configure multiple keyboard layouts and hotkey to switch (Alt+CAPSLOCK in this example)
 #exec --no-startup-id setxkbmap -layout 'us,sk' -variant altgr-intl,qwerty -option 'grp:alt_caps_toggle'
@@ -234,10 +201,13 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
-exec --no-startup-id sleep 1 && feh --bg-fill '/home/iwku/Pictures/wallpapers/misc/windows-error.jpg'
+#exec --no-startup-id sleep 1 && feh --bg-fill '/home/iwku/.config/i3/wallpaper/ocean.png'
+#exec --no-startup-id sleep 1 && feh --bg-fill '/home/iwku/.config/i3/wallpaper/shop.jpg'
+#exec --no-startup-id sleep 1 && feh --bg-fill '/home/iwku/.config/i3/wallpaper/moon.jpg'
+exec --no-startup-id sleep 1 && feh --bg-fill '/home/iwku/.config/i3/wallpaper/yeye.jpg'
 
 # set powersavings for display:
-exec --no-startup-id xset s 480 dpms 600 600 600
+#exec --no-startup-id xset s 480 dpms 600 600 600
 
 # disable power saving (for example if using xscreensaver)
 #exec --no-startup-id xset -dpms
@@ -300,7 +270,7 @@ for_window [class="Pamac-manager"] floating enable
 for_window [window_role="About"] floating enable
 
 # set border of floating window
-for_window [class="urxvt"] border pixel 1
+#for_window [class="urxvt"] border pixel 1
 
 # set size of floating window
 #for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog
@@ -373,23 +343,7 @@ bar {
 	        }
 }
 
-# ROFI
-
 # LAUNCHER
-bindsym $mod+space exec rofi -modi drun -show drun \
-# bindsym $mod+space exec $HOME/.config/rofi/bin/launcher
-
-bindsym $mod+d exec $HOME/.config/rofi/bin/runner
+bindsym $mod+space exec rofi -modi drun -show drun 
+bindsym $mod+d exec $HOME/.config/rofi/bin/runner 
 bindsym $mod+Shift+s exec $HOME/.config/rofi/bin/screenshot
-
-# WINDOW OPENING
-# bindsym $mod+t exec rofi -show window \
-#		-config ~/.config/rofi/rofidmenu.rasi
-
-# bindsym F10 exec rofi -show window \
-#		-config ~/.config/rofi/rofidmenu.rasi
-
-## rofi bindings to manage clipboard (install rofi-greenclip from the AUR)
-
-#exec --no-startup-id greenclip daemon>/dev/null
-#		-config ~/.config/rofi/rofidmenu.rasi
