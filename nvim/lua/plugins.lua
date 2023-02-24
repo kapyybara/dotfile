@@ -72,6 +72,7 @@ packer.startup(function(use)
     use 'folke/tokyonight.nvim'
     use "rebelot/kanagawa.nvim"
     use { "catppuccin/nvim", as = "catppuccin" }
+    use { "ellisonleao/gruvbox.nvim" }
 
     use {
         'nvim-tree/nvim-tree.lua',
@@ -80,5 +81,4 @@ packer.startup(function(use)
         },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
-
 end)
