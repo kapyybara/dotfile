@@ -37,7 +37,16 @@ packer.startup(function(use)
     use({
         "glepnir/lspsaga.nvim",
         branch = "main",
-    }) -- lspsaga LSP UIs
+        config = function()
+            require("lspsaga").setup({})
+        end,
+        requires = {
+            { "nvim-tree/nvim-web-devicons" },
+            --Please make sure you install markdown and markdown_inline parser
+            { "nvim-treesitter/nvim-treesitter" }
+        }
+    })
+    -- lspsaga LSP UIs
     use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics , code actions, and more
     use 'MunifTanjim/prettier.nvim' -- Prettierplugin for neovim's built-in LSP client
     use "williamboman/mason.nvim"
