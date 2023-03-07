@@ -5,7 +5,7 @@ if (not status) then return end
 saga.setup {
     ui = {
         -- currently only round theme
-        theme = 'round',
+        theme = 'dashed',
         -- this option only work in neovim 0.9
         title = true,
         -- border type can be single,double,rounded,solid,shadow.
@@ -66,7 +66,7 @@ vim.keymap.set('n', 'gac', '<Cmd>Lspsaga code_action<cr>', opts)
 vim.keymap.set("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
 vim.keymap.set("n", "<leader>cd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts)
 vim.keymap.set("n", "<A-d>", "<cmd>Lspsaga term_toggle<CR>", opts)
---vim.keymap.set("n", "<A-g>", "<cmd>Lspsaga open_floaterm lazygit<CR>", opts)
+vim.keymap.set("n", "<A-g>", "<cmd>Lspsaga term_toggle lazygit<CR>", opts)
 --
 vim.keymap.set("t", "<A-q>", [[<C-\><C-n><cmd>Lspsaga term_toggle<CR>]], opts)
 

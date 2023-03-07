@@ -12,7 +12,8 @@ local on_attach = function(client, bufnr)
     if client.server_capabilities.documentFormattingProvider then
         vim.api.nvim_command [[augroup Format]]
         vim.api.nvim_command [[autocmd! * <buffer>]]
-        vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+        --        vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
+        vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
         vim.api.nvim_command [[augroup END]]
     end
 end
@@ -23,6 +24,21 @@ nvim_lsp.tsserver.setup {
     cmd = { "typescript-language-server", "--stdio" },
     init_options = {
         hostInfo = "neovim"
+    }
+}
+
+require 'lspconfig'.eslint.setup {
+    root_dir = util.root_pattern(
+        '.eslintrc',
+        '.eslintrc.js',
+        '.eslintrc.cjs',
+        '.eslintrc.yaml',
+        '.eslintrc.yml',
+        '.eslintrc.json',
+        'package.json'
+    ),
+    settings = {
+        packageManager = "pnpm"
     }
 }
 
