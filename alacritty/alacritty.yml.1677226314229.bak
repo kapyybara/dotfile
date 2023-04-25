@@ -14,7 +14,7 @@ window:
   opacity: 0.9
 
 font:
-  size: 11
+  size: 12
   draw_bold_text_with_bright_colors: true
 
 key_bindings:
@@ -24,7 +24,7 @@ colors:
   # Default colors
   primary:
     # hard contrast: background = '#1d2021'
-    background: "#1d2021"
+    background: "#282828"
     # soft contrast: background = '#32302f'
     foreground: "#ebdbb2"
 
