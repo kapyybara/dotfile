@@ -27,20 +27,19 @@ nvim_lsp.tsserver.setup {
     }
 }
 
-require 'lspconfig'.eslint.setup {
-    root_dir = util.root_pattern(
-        '.eslintrc',
-        '.eslintrc.js',
-        '.eslintrc.cjs',
-        '.eslintrc.yaml',
-        '.eslintrc.yml',
-        '.eslintrc.json',
-        'package.json'
-    ),
-    settings = {
-        packageManager = "pnpm"
-    }
-}
+-- require 'lspconfig'.eslint.setup {
+--     root_dir = util.root_pattern(
+--         '.eslintrc',
+--         '.eslintrc.js',
+--         '.eslintrc.cjs',
+--         '.eslintrc.yaml',
+--         '.eslintrc.yml',
+--         '.eslintrc.json'
+--     ),
+--     settings = {
+--         packageManager = "pnpm"
+--     }
+-- }
 
 nvim_lsp.lua_ls.setup {
     on_attach = on_attach,
