@@ -8,7 +8,7 @@ set -gx PATH "$HOME/.cargo/bin" $PATH;
 # end
 
 # Nvm Node
-# set --universal nvm_default_version v16.17.0
+set --universal nvm_default_version v16.19.0
 nvm use
 # end
 
@@ -47,10 +47,14 @@ alias lpdc "cp /home/iwku/.config/nvim/default_var/.prettierrc ./"
 
 # git
 alias ga "git add"
-alias gc "git commit"
+alias gc "git commit -m"
 alias gp "git push"
-alias gl "git pull origin main"
+alias gb "git branch"
+alias gco "git checkout"
 # end
+
+# Power
+alias pwoff "shutdown now"
 
 # 1.1.1.1
 alias 1.1 "warp-cli connect"
@@ -58,6 +62,8 @@ alias 1.0 "warp-cli disconnect"
 
 alias rm="rm -i"
 alias top bpytop
+alias nf "neofetch"
+
 
 
 starship init fish | source
