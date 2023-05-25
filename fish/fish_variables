@@ -2,10 +2,10 @@
 # VERSION: 3.0
 SETUVAR ZO_CMD:zo
 SETUVAR Z_CMD:z
-SETUVAR Z_DATA:/home/iwku/\x2elocal/share/z/data
-SETUVAR Z_DATA_DIR:/home/iwku/\x2elocal/share/z
-SETUVAR Z_EXCLUDE:\x5e/home/iwku\x24
-SETUVAR __fish_initialized:3400
+SETUVAR Z_DATA:/home/kapybara/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:/home/kapybara/\x2elocal/share/z
+SETUVAR Z_EXCLUDE:\x5e/home/kapybara\x24
+SETUVAR __fish_initialized:3100
 SETUVAR _fisher_catppuccin_2F_fish_files:\x7e/\x2econfig/fish/themes/Catppuccin\x20Frappe\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Latte\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Macchiato\x2etheme\x1e\x7e/\x2econfig/fish/themes/Catppuccin\x20Mocha\x2etheme
 SETUVAR _fisher_jethrokuan_2F_z_files:\x7e/\x2econfig/fish/functions/__z\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_add\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_clean\x2efish\x1e\x7e/\x2econfig/fish/functions/__z_complete\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/z\x2efish
 SETUVAR _fisher_jorgebucaran_2F_autopair_2E_fish_files:\x7e/\x2econfig/fish/functions/_autopair_backspace\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_left\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_right\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_insert_same\x2efish\x1e\x7e/\x2econfig/fish/functions/_autopair_tab\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/autopair\x2efish
@@ -52,7 +52,7 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/home/linuxbrew/\x2elinuxbrew/bin\x1e/home/iwku/\x2elocal/bin\x1e/home/iwku/\x2eyarn/bin\x1e/home/iwku/\x2efzf/bin
-SETUVAR nvm_data:/home/iwku/\x2elocal/share/nvm
+SETUVAR fish_user_paths:/home/linuxbrew/\x2elinuxbrew/bin\x1e/home/kapybara/\x2elocal/bin\x1e/home/kapybara/\x2eyarn/bin\x1e/home/kapybara/\x2efzf/bin
+SETUVAR nvm_data:/home/kapybara/\x2elocal/share/nvm
 SETUVAR nvm_default_version:v16\x2e19\x2e0
 SETUVAR nvm_mirror:https\x3a//nodejs\x2eorg/dist
