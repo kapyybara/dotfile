@@ -19,20 +19,20 @@ packer.startup(function(use)
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    } -- Statusline
-    use 'L3MON4D3/LuaSnip' -- Snippet
+    }                          -- Statusline
+    use 'L3MON4D3/LuaSnip'     -- Snippet
     use 'onsails/lspkind.nvim' -- vscode-like picotgrams
     use {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
-    } -- Syntax highlight
+    }                      -- Syntax highlight
     use 'hrsh7th/nvim-cmp' -- Completion
     use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
 
     -- LSP
-    use 'hrsh7th/cmp-buffer' -- nvim-cmp source for neovim's buffer words
-    use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
+    use 'hrsh7th/cmp-buffer'    -- nvim-cmp source for neovim's buffer words
+    use 'hrsh7th/cmp-nvim-lsp'  -- nvim-cmp source for neovim's built-in LSP
     use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
     use({
         "glepnir/lspsaga.nvim",
@@ -48,7 +48,7 @@ packer.startup(function(use)
     })
     -- lspsaga LSP UIs
     use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics , code actions, and more
-    use 'MunifTanjim/prettier.nvim' -- Prettierplugin for neovim's built-in LSP client
+    use 'MunifTanjim/prettier.nvim'       -- Prettierplugin for neovim's built-in LSP client
     use "williamboman/mason.nvim"
     use "williamboman/mason-lspconfig.nvim"
 
@@ -81,13 +81,13 @@ packer.startup(function(use)
     use 'folke/tokyonight.nvim'
     use "rebelot/kanagawa.nvim"
     use { "catppuccin/nvim", as = "catppuccin" }
-    use { "ellisonleao/gruvbox.nvim" }
+    -- use { "ellisonleao/gruvbox.nvim" }
 
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
             'nvim-tree/nvim-web-devicons', -- optional, for file icons
         },
-        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+        tag = 'nightly'                    -- optional, updated every week. (see issue #1193)
     }
 end)
