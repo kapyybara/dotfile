@@ -39,6 +39,10 @@ function fuck -d "Correct your previous console command"
 end
 # end
 
+# deno
+export DENO_INSTALL="/home/kabybara/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+
 # Alias
 alias vy "nvim"
 alias pn "pnpm"
