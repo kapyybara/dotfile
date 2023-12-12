@@ -40,7 +40,7 @@ end
 # end
 
 # deno
-export DENO_INSTALL="/home/kabybara/.deno"
+export DENO_INSTALL="/home/samsa/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 # Alias
