@@ -40,11 +40,11 @@ packer.startup(function(use)
         config = function()
             require("lspsaga").setup({})
         end,
-        requires = {
-            { "nvim-tree/nvim-web-devicons" },
-            --Please make sure you install markdown and markdown_inline parser
-            { "nvim-treesitter/nvim-treesitter" }
-        }
+        -- requires = {
+        --     { "nvim-tree/nvim-web-devicons" },
+        --     --Please make sure you install markdown and markdown_inline parser
+        --     { "nvim-treesitter/nvim-treesitter" }
+        -- }
     })
     -- lspsaga LSP UIs
     use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics , code actions, and more
@@ -54,10 +54,10 @@ packer.startup(function(use)
 
 
     use {
-        'nvim-telescope/telescope.nvim',
-        tag = '0.1.0',
-        requires = { { 'nvim-lua/plenary.nvim' } }
-    } -- Fuzzy find
+        'nvim-telescope/telescope.nvim', tag = '0.1.5',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    -- Fuzzy find
     use { "nvim-telescope/telescope-file-browser.nvim" }
     -- Using packer.nvim
     use { 'akinsho/bufferline.nvim',

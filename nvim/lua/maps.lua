@@ -3,7 +3,6 @@ local keymap = vim.keymap
 -- Do not yank with x
 keymap.set('n', 'x', '"_x')
 
-
 -- Increment/decremment
 keymap.set('n', '+', '<C-a>')
 keymap.set('n', '-', '<C-x>')
@@ -19,8 +18,10 @@ keymap.set('n', 'te', ':tabedit', { silent = true })
 -- Split window
 keymap.set('n', 'ss', ':split<Return><C-W>w', { silent = true })
 keymap.set('n', 'sv', ':vsplit<Return><C-W>w', { silent = true })
+
 -- Move window
 keymap.set('n', '<Space>', '<C-w>w')
+
 keymap.set('', 's<left>', '<C-w>h')
 keymap.set('', 's<up>', '<C-w>k')
 keymap.set('', 's<down>', '<C-w>j')

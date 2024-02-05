@@ -43,5 +43,5 @@ theme.setup({
 })
 
 
--- vim.cmd [[colorscheme tokyonight]]
+vim.cmd [[colorscheme tokyonight]]
 
